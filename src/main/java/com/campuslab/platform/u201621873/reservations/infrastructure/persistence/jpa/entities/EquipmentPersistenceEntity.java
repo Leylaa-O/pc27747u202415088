@@ -23,12 +23,13 @@ public class EquipmentPersistenceEntity extends AuditableAbstractPersistenceEnti
     private ReservationCode reservationCode;
 
     @Convert(converter = ReservationCodePersistenceConverter.class)
-    @Column(name = "reservation_code", nullable = false, updatable = false)
+    @Column(name = "laboratory_id", nullable = false, updatable = false)
     private LaboratoryId laboratoryId;
 
     @Convert(converter = ReservationCodePersistenceConverter.class)
-    @Column(name = "reservation_code", nullable = false, updatable = false)
+    @Column(name = "reservation_period", nullable = false, updatable = false)
     private ReservationPeriod reservationPeriod;
+
     @Convert(converter = ReservationCodePersistenceConverter.class)
     @Column(name = "reservation_code", nullable = false, updatable = false)
     private EquipmentBatch equipmentBatch;
