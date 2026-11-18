@@ -24,12 +24,6 @@ public class OpenApiConfiguration {
     @Value("${spring.application.name}")
     String applicationName;
 
-    @Value("${documentation.application.description}")
-    String applicationDescription;
-
-    @Value("${documentation.application.version}")
-    String applicationVersion;
-
     // Methods
 
     /**
@@ -45,8 +39,6 @@ public class OpenApiConfiguration {
         openApi
                 .info(new Info()
                         .title(this.applicationName)
-                        .description(this.applicationDescription)
-                        .version(this.applicationVersion)
                         .contact(new Contact()
                                 .name("ACME Learning Center Support")
                                 .email("support@acme-learning.com")
